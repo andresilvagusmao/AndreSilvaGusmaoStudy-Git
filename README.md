@@ -187,15 +187,15 @@ Git is a distributed version control system that implements a directed acyclic g
 
 **Basic examples 🔰**:
 
-<!--- ```bash --->
+```bash
 # Initialize a Git repository
 git init
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Stage changes for commit
 git add .
-<!--- ``` --->
+```
 
 <!--- ```bash --->
 # Commit changes with a message
