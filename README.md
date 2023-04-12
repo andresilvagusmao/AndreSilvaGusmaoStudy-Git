@@ -197,10 +197,10 @@ git init
 git add .
 ```
 
-<!--- ```bash --->
+```git
 # Commit changes with a message
 git commit -m "Initial commit"
-<!--- ``` --->
+```
 
 <!--- ```bash --->
 # Create a new branch
