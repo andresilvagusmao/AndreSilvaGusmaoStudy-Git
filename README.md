@@ -187,89 +187,89 @@ Git is a distributed version control system that implements a directed acyclic g
 
 **Basic examples 🔰**:
 
-<!--- ```bash --->
+```markdown
 # Initialize a Git repository
 git init
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Stage changes for commit
 git add .
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Commit changes with a message
 git commit -m "Initial commit"
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Create a new branch
 git checkout -b new-feature
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Merge changes from one branch to another
 git merge new-feature
-<!--- ``` --->
+```
 
 **Middle-ground examples ⚖️**:
 
-<!--- ```bash --->
+```markdown
 # Clone a remote repository
 git clone https://github.com/user/repository.git
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Check the status of your repository
 git status
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # View the commit history
 git log
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Create a remote repository connection
 git remote add origin https://github.com/user/repository.git
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Push changes to the remote repository
 git push -u origin main
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Pull changes from the remote repository
 git pull origin main
-<!--- ``` --->
+```
 
 **Advanced examples 🚀**:
 
-<!--- ```bash --->
+```markdown
 # Rebase a branch onto another
 git rebase main
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Squash multiple commits into one
 git rebase -i HEAD~3
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Apply changes from a specific commit using cherry-pick
 git cherry-pick <commit-hash>
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Create a tag for a specific commit
 git tag -a v1.0 -m "Version 1.0" <commit-hash>
-<!--- ``` --->
+```
 
-<!--- ```bash --->
+```markdown
 # Undo the last commit, keeping the changes in the working directory
 git reset HEAD^
-<!--- ``` --->
+```
 
 <a name="History_of_Git"></a>
 
@@ -439,57 +439,57 @@ The process of installing Git entails obtaining the relevant software distributi
 
 **Basic examples 🔰**:
 
-<!--- ```bash --->
+```markdown
 1. Download Git for Windows from [Git's official website](https://git-scm.com/download/win)
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 2. Install Git on macOS using Homebrew: `brew install git`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 3. Install Git on Ubuntu or Debian using apt: `sudo apt-get install git`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 4. Check Git version: `git --version`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 5. Configure Git user name: `git config --global user.name "Your Name"`
-<!--- ``` --->
+```
 
 **Middle-ground examples ⚖️**:
 
-<!--- ```bash --->
+```markdown
 1. Configure Git user email: `git config --global user.email "your.email@example.com"`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 2. Set default Git editor to VSCode: `git config --global core.editor "code --wait"`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 3. Enable Git credential helper to cache passwords: `git config --global credential.helper cache`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 4. Set Git default branch name: `git config --global init.defaultBranch main`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 5. Show Git configuration: `git config --list`
-<!--- ``` --->
+```
 
 **Advanced examples 🚀**:
 
-<!--- ```bash --->
+```markdown
 1. Configure Git to use a custom diff tool: `git config --global diff.tool your_diff_tool`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 2. Configure a specific repository to use a different user name: `git config user.name "Different Name"`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 3. Set up a Git alias for a frequently used command: `git config --global alias.st status`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 4. Configure Git to use a specific SSH key for a remote repository: `git config --local core.sshCommand "ssh -i ~/.ssh/your_key"`
-<!--- ``` --->
-<!--- ```bash --->
+```
+```markdown
 5. Set up a custom merge strategy for a specific file: `git config --local merge.ours.driver "true"`
-<!--- ``` --->
+```
 
 <a name="Git_Terminology"></a>
 
@@ -586,28 +586,30 @@ Git is like a special computer program that helps you save different versions of
 
 **Basic examples 🔰**:
 
-<!--- ```bash --->
+```markdown
 1. Initialize a Git repository: `git init`
 2. Add a file to the staging area: `git add file.txt`
 3. Commit changes to the repository: `git commit -m "Commit message"`
 4. Create a new branch: `git checkout -b new-branch`
 5. Merge a branch: `git merge source-branch`
-
+```
 **Middle-ground examples ⚖️**:
 
-<!--- ```bash --->
+```markdown
 1. Clone a remote repository: `git clone https://github.com/user/repo.git`
 2. Fetch changes from a remote repository: `git fetch`
 3. Pull changes from a remote repository: `git pull`
 4. Push changes to a remote repository: `git push origin branch-name`
 5. Check the status of your repository: `git status`
+```
 
 **Advanced examples 🚀**:
 
-<!--- ```bash --->
+```markdown
 1. Resolve merge conflicts using a merge tool: `git mergetool`
 2. Rebase a branch onto another branch: `git rebase target-branch`
 3. Squash multiple commits into a single commit: `git rebase -i HEAD~3` (Replace 3 with the number of commits to squash)
 4. Amend the last commit: `git commit --amend`
 5. Interactive staging: `git add -i`
+```
 
