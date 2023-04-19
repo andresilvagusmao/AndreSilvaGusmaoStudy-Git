@@ -1,0 +1,10 @@
+Who created Git?|Linus Torvalds
+When was Git created?|2005
+Why was Git created?|To replace BitKeeper as the Linux kernel source code management tool.
+What is the primary objective of Git?|To manage the source code of the Linux kernel efficiently and effectively.
+What was the main reason behind the development of Git?|The need for a free, open-source, and distributed version control system.
+What makes Git stand out from other version control systems created around the same time?|Git's distributed nature, efficient handling of large projects, and advanced branching and merging capabilities make it stand out from other VCSs of its time.
+What are the main differences between Git and its predecessor, BitKeeper?|Git is open-source and free, while BitKeeper is proprietary. Git also has a more advanced branching model and better performance on large projects.
+What was the first version control system used for the Linux kernel?|BitKeeper
+What event led to the creation of Git?|The decision to stop using BitKeeper due to its proprietary nature and licensing issues.
+Which version control system was used before Git for the Linux kernel development?|BitKeeper

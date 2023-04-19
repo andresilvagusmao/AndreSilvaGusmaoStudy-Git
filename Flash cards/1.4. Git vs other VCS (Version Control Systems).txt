@@ -1,0 +1,11 @@
+What is the main difference between Git and Subversion (SVN)?|Git is a distributed version control system, while SVN is a centralized version control system.
+How does Git's branching model differ from other VCSs like SVN or CVS?|Git's branches are lightweight, easy to create, and fast to switch between, making it more efficient than other VCSs.
+What is a key advantage of Git over other version control systems?|Git's distributed nature allows for improved collaboration, offline work, and better handling of large projects.
+Why might someone choose to use Mercurial instead of Git?|Mercurial has a simpler and more intuitive command-line interface, making it more accessible for beginners.
+What are some advantages of using Git over other version control systems like Perforce?|Git is open-source, free, and provides better support for branching and merging.
+Which version control system is more suitable for small projects with fewer collaborators: Git or SVN?|Both Git and SVN can be suitable for small projects, but Git's flexibility and offline capabilities make it a popular choice for many developers.
+What is the difference between Git and Mercurial in terms of their data models?|Git uses a directed acyclic graph (DAG) to represent commits, while Mercurial uses a simpler, linear data model.
+What are some disadvantages of using Git over other version control systems like SVN?|Git has a steeper learning curve and can be more complex to use than SVN.
+What is one advantage of using SVN over Git?|SVN can provide more fine-grained access control to repositories compared to Git.
+What is a common use case for choosing Perforce over Git?|Perforce is often chosen for its superior handling of binary files, which can be crucial for game development or other projects with large binary assets.
+What is the main reason for Git's widespread adoption compared to other version control systems?|Git's flexibility, distributed nature, and efficient handling of large projects have contributed to its widespread adoption.

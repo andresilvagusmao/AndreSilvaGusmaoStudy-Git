@@ -1,0 +1,9 @@
+What is the difference between centralized and distributed version control systems?|Centralized VCSs have a single central repository, while distributed VCSs have multiple repositories that can sync with each other.
+What is an example of a centralized version control system?|Subversion (SVN)
+What is an example of a distributed version control system?|Git
+What are the advantages of using a distributed version control system?|Improved collaboration, offline work, and better handling of large projects.
+What are the disadvantages of using a centralized version control system?|Limited offline work, single point of failure, and slower performance on large projects.
+Which version control system is more suitable for large-scale projects: centralized or distributed?|Distributed version control systems are more suitable for large-scale projects due to their better performance and scalability.
+What is the main drawback of centralized version control systems?|Centralized version control systems have a single point of failure and limited offline work capabilities.
+In a distributed version control system, how are changes propagated between repositories?|Changes are propagated through a series of pull and push operations between the local and remote repositories.
+Why might a team choose to use a centralized version control system?|A team might choose a centralized VCS for its simpler setup, access control, and centralized management of project files.

@@ -1,5 +1,9 @@
 # AndreSilvaGusmaoStudy-Git
-I want to test and share a documentation created by AI to teach people about different subjects
+This document was strcutured by André Silva Gusmão.Check my socials, follow me and leave a message, if you will.
+Socials:
+https://linktr.ee/AndreSilvaGusmao
+
+This document aims to guide the study of anyone about GIT. Flash cards and flash cards for Brazilian exams were created as well.
 # Index
 
 # Index
@@ -3090,900 +3094,481 @@ git rebase --continue
 ===========================================================================
 
 
-
 <a name="Git_Workflow_and_Best_Practices"></a>
 ## Git Workflow and Best Practices
 
 <a name="Git_Flow"></a>
 ### Git Flow
 
-**Important points 📌**
-- Popular Git branching model
-- Feature branches
-- Master and Develop branches
-- Release and hotfix branches
+**Important points 📌**:
+- Branching model for managing projects
+- Two main branches: `master` and `develop`
+- Feature branches, release branches, and hotfix branches
 
-**Content table 📜**
+**Content table 📜**:
 
-| Point | Description |
-| --- | --- |
-| Branching model | Git Flow is a branching model for managing Git repositories. |
-| Feature branches | These branches are used to develop new features or improvements. |
-| Master branch | The main branch used to reflect production-ready code. |
-| Develop branch | A branch used for integrating new features, bug fixes, and improvements. |
-| Release branches | Branches created to prepare for a new production release. |
-| Hotfix branches | Branches used for making critical fixes on the production environment. |
+| Points       | Description                                                  |
+|--------------|--------------------------------------------------------------|
+| Branching    | Git Flow uses a branching model to manage different versions. |
+| Main branches| Two main branches: `master` and `develop`.                   |
+| Feature      | Feature branches are used for new features.                  |
+| Release      | Release branches prepare for new releases.                   |
+| Hotfix       | Hotfix branches fix critical issues.                         |
 
-**References 📚**
-1. [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
-2. [Git Flow Documentation](https://github.com/nvie/gitflow)
+**References 📚**:
+- [Git Flow (AVH Edition)](https://github.com/petervanderdoes/gitflow-avh)
+- [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
 
-**Diagram 📊**
-![Git Flow Diagram](https://leanpub.com/site_images/git-flow/git-flow-nvie.png)
+**Diagram 📊**:
+- [Git Flow Diagram](https://nvie.com/img/git-model@2x.png)
 
-**10 years old definition 👶**
-Git Flow is like a set of rules to help people work together on a project using Git. It tells you when to create new branches and how to name them.
+**10 years old definition 👶**:
+Git Flow is like a tree with branches. The tree trunk is the main part, and the branches are different parts of the project. We use this to work on the project without mixing everything up.
 
-**Definition 🧑**
-Git Flow is a branching model for Git repositories that provides a consistent workflow for managing features, bug fixes, and releases. It uses specific branch naming conventions and merge strategies to keep the repository organized and the development process smooth.
+**Definition 🧑**:
+Git Flow is a branching model for Git that helps manage different versions of a project. It has two main branches (`master` and `develop`), and uses feature branches, release branches, and hotfix branches to organize the work.
 
-**PHD definition 🎓**
-Git Flow is a comprehensive branching and merging strategy for Git repositories that facilitates parallel development, release management, and hotfixes. It standardizes the branching model by utilizing feature, release, and hotfix branches to ensure a consistent and scalable approach to software development.
+**PHD definition 🎓**:
+Git Flow is a comprehensive Git branching strategy that provides a structured approach to managing software releases and concurrent feature development. It employs a hierarchical branching model, incorporating main branches, feature branches, release branches, and hotfix branches to facilitate parallel development, versioning, and release management.
 
-**Practical exercises🏋️**
-1. Initialize a Git repository with Git Flow.
-2. Create a feature branch for a new feature.
-3. Merge the feature branch into the develop branch.
-4. Create a release branch from the develop branch.
-5. Merge the release branch into the master branch and develop branch.
-6. Create a hotfix branch and merge it into the master and develop branches.
+**Practical exercises🏋️**:
+1. Initialize a Git repository and set up Git Flow.
+2. Create a feature branch and implement a new feature.
+3. Merge the feature branch into the `develop` branch.
+4. Create a release branch and prepare for a new release.
+5. Merge the release branch into the `master` branch and create a new tag.
 
-**Answers 👍**
-1. To initialize a Git repository with Git Flow, first create a new directory and initialize a Git repository using `git init`. Then, install Git Flow and run `git flow init` to set up the branches.
-2. Create a feature branch with `git flow feature start <feature_name>`.
-3. Merge the feature branch into the develop branch using `git flow feature finish <feature_name>`.
-4. Create a release branch with `git flow release start <version>`.
-5. Merge the release branch into the master branch and develop branch using `git flow release finish <version>`.
-6. Create a hotfix branch with `git flow hotfix start <hotfix_name>`. Merge the hotfix branch into the master and develop branches using `git flow hotfix finish <hotfix_name>`.
+**Answers 👍**:
+1. `git init`, `git flow init`, and follow the prompts.
+2. `git flow feature start <feature_name>`, implement the feature, and `git flow feature finish <feature_name>`.
+3. The `git flow feature finish` command in step 2 will automatically merge the feature branch into the `develop` branch.
+4. `git flow release start <version_number>`, prepare the release (update version numbers, etc.), and `git flow release finish <version_number>`.
+5. The `git flow release finish` command in step 4 will automatically merge the release branch into the `master` branch, create a new tag, and merge back into the `develop` branch.
 
-**Basic examples 🔰**
-<!--- ```c# --->
-1. Initializing a Git repository and Git Flow:
-mkdir my_project
-cd my_project
+**Basic examples 🔰**:
+<!--- open code --->
+# Initialize a Git repository and set up Git Flow
 git init
 git flow init
-<!--- ```--->
-2. Creating a feature branch:
-<!--- ```c# --->
-git flow feature start my_feature
-<!--- ```--->
-<!--- ```c# --->
-3. Merging the feature branch into the develop branch:
-git flow feature finish my_feature
-<!--- ```--->
-<!--- ```c# --->
-4. Creating a release branch:
-git flow release start 1.0
-<!--- ```--->
-<!--- ```c# --->
-5. Merging the release branch into the master branch and develop branch:
-git flow release finish 1.0
-6. Creating a hotfix branch and merging it into the master and develop branches:
-git flow hotfix start fix_bug
-git flow hotfix finish fix_bug
-<!--- ```--->
-**Middle-ground examples ⚖️**
-<!--- ```c# --->
-1. Creating a feature branch with a custom prefix:
-git config gitflow.prefix.feature 'feature/'
+<!--- close code --->
+
+<!--- open code --->
+# Create a feature branch and implement a new feature
 git flow feature start new_feature
-2. Publishing a feature branch remotely:
-git flow feature publish new_feature
-3. Fetching a remote feature branch and tracking it locally:
-git flow feature track new_feature
-4. Creating a release branch with a custom prefix:
-git config gitflow.prefix.release 'release/'
-git flow release start 2.0
-5. Listing all Git Flow branches:
-git branch | grep -E 'feature/|release/|hotfix/'
-<!--- ```--->
-**Advanced examples 🚀**
-<!--- ```c# --->
-1. Customize all Git Flow prefixes:
-git config gitflow.prefix.feature 'feat/'
-git config gitflow.prefix.release 'rel/'
-git config gitflow.prefix.hotfix 'fix/'
-git config gitflow.prefix.support 'supp/'
-git config gitflow.prefix.versiontag 'v'
-2. Manage multiple release branches concurrently:
-git flow release start 2.1
-git flow release start 2.2
-3. Create a hotfix branch for a specific version:
-git flow hotfix start fix_critical_bug v2.1
-4. Use `--no-ff` flag to avoid fast-forward merges when finishing a feature, release, or hotfix branch:
-git flow feature finish --no-ff my_feature
-5. Use custom hooks and filters in Git Flow:
-mkdir -p .git/hooks/gitflow
-echo '#!/bin/sh' > .git/hooks/gitflow/feature/start
-echo 'echo "Custom action on feature start"' >> .git/hooks/gitflow/feature/start
-chmod +x .git/hooks/gitflow/feature/start
-<!--- ```--->
+# (Implement the feature)
+git flow feature finish new_feature
+<!--- close code --->
+
+<!--- open code --->
+# Create a release branch and prepare for a new release
+git flow release start v1.0.0
+# (Prepare the release)
+git flow release finish v1.0.0
+<!--- close code --->
+
 <a name="GitHub_Flow"></a>
 ### GitHub Flow
 
-**Important points 📌**
-- Simpler Git workflow
-- Feature branches
-- Pull requests
-- Continuous Deployment
+**Important points 📌**:
+- Simplified Git workflow
+- One main branch: `master` or `main`
+- Short-lived feature branches
+- Pull requests for collaboration and code review
 
-**Content table 📜**
+**Content table 📜**:
 
-| Point | Description |
-| --- | --- |
-| Simplicity | GitHub Flow is a simpler Git workflow compared to Git Flow. |
-| Feature branches | Branches are used to develop new features or improvements. |
-| Pull requests | Changes are proposed and reviewed using pull requests. |
-| Continuous Deployment | Deployments are made directly from the main branch. |
+| Points         | Description                                               |
+|----------------|-----------------------------------------------------------|
+| Simplified     | GitHub Flow is a simpler workflow than Git Flow.          |
+| Main branch    | One main branch, usually called `master` or `main`.       |
+| Feature        | Short-lived feature branches for development.             |
+| Pull requests  | Collaboration and code review through pull requests.      |
 
-**References 📚**
-1. [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/)
-2. [GitHub Flow Documentation](https://docs.github.com/en/get-started/quickstart/github-flow)
+**References 📚**:
+- [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
+- [GitHub Flow – Scott Chacon](https://scottchacon.com/2011/08/31/github-flow.html)
 
-**Diagram 📊**
-![GitHub Flow Diagram](https://guides.github.com/activities/hello-world/branching.png)
+**Diagram 📊**:
+- [GitHub Flow Diagram](https://guides.github.com/activities/hello-world/branching.png)
 
-**10 years old definition 👶**
-GitHub Flow is like a simple set of rules to help people work together on a project using GitHub. It tells you how to make changes and share them with others.
+**10 years old definition 👶**:
+GitHub Flow is a simple way to work on a project. We make small branches for each part of the project and then put them back together.
 
-**Definition 🧑**
-GitHub Flow is a lightweight Git workflow designed for projects that use continuous deployment. It focuses on feature branches and pull requests, allowing developers to collaborate effectively and deploy changes directly from the main branch
+**Definition 🧑**:
+GitHub Flow is a simplified Git workflow with one main branch (`master` or `main`) and short-lived feature branches. It uses pull requests for collaboration and code review.
 
-**PHD definition 🎓**
-GitHub Flow is a streamlined Git workflow that emphasizes the use of feature branches and pull requests to facilitate collaboration, code review, and continuous deployment. It simplifies the branching model and deployment process by deploying directly from the main branch, making it suitable for projects with frequent releases.
+**PHD definition 🎓**:
+GitHub Flow is a streamlined Git workflow designed for continuous deployment and collaboration. It revolves around a single main branch and feature branches, facilitating rapid iteration and efficient code review via pull requests.
 
-**Practical exercises🏋️**
-1. Create a new GitHub repository and clone it locally.
-2. Create a feature branch.
-3. Make changes and commit them to the feature branch.
-4. Push the feature branch to the remote repository.
-5. Create a pull request to merge the feature branch into the main branch.
-6. Review, approve, and merge the pull request.
+**Practical exercises🏋️**:
+1. Fork a repository on GitHub.
+2. Clone the forked repository to your local machine.
+3. Create a new branch for a feature or bugfix.
+4. Commit changes to the new branch and push to the remote repository.
+5. Create a pull request on GitHub.
 
-**Answers 👍**
-1. Create a new GitHub repository by clicking "New" on your GitHub dashboard. Clone the repository using `git clone <repository_url>`.
-2. Create a feature branch with `git checkout -b my_feature`.
-3. Make changes to the codebase and commit them using `git add .` and `git commit -m "Add my feature"`.
-4. Push the feature branch to the remote repository using `git push origin my_feature`.
-5. Go to the GitHub repository page, and click on "Pull Requests". Click "New pull request" and select the feature branch to create a pull request.
-6. Review the changes, leave comments if needed, and finally click "Merge pull request" to merge the changes into the main branch.
+**Answers 👍**:
+1. Click the "Fork" button on the top right corner of a repository's page on GitHub.
+2. `git clone https://github.com/your_username/forked_repository.git`
+3. `git checkout -b new_branch`
+4. Make changes, `git add .`, `git commit -m "Commit message"`, and `git push origin new_branch`.
+5. Navigate to the original repository on GitHub, click "Pull Requests", and then click "New Pull Request". Select your forked repository and new branch, and then click "Create Pull Request".
 
-**Basic examples 🔰**
-<!--- ```c# --->
-1. Cloning a GitHub repository:
-git clone https://github.com/username/my_project.git
-2. Creating a feature branch:
-git checkout -b my_feature
-3. Committing changes to the feature branch:
+**Basic examples 🔰**:
+<!--- open code --->
+# Clone the forked repository
+git clone https://github.com/your_username/forked_repository.git
+<!--- close code --->
+
+<!--- open code --->
+# Create a new branch for a feature or bugfix
+git checkout -b new_branch
+<!--- close code --->
+
+<!--- open code --->
+# Commit changes to the new branch and push to the remote repository
 git add .
-git commit -m "Add my feature"
-4. Pushing the feature branch to the remote repository:
-git push origin my_feature
-5. Pulling changes from the remote main branch:
-git checkout main
-git pull
-<!--- ``` --->
-**Middle-ground examples ⚖️**
-<!--- ```c# --->
-1. Create a pull request from the command line using `hub`:
-hub pull-request -b main -h my_feature -m "Add my feature"
-2. Fetch and checkout a remote pull request locally:
-git fetch origin pull/<pull_request_id>/head:pr_branch
-git checkout pr_branch
-3. Merge a pull request locally and push the changes to the main branch:
-git checkout main
-git merge --no-ff pr_branch
-git push origin main
-4. Rebase the feature branch on top of the main branch:
-git checkout my_feature
-git rebase main
-5. Resolve merge conflicts and continue the rebase process:
-git add <conflicted_file>
-git rebase --continue
-<!--- ``` --->
-**Advanced examples 🚀**
-<!--- ```c# --->
-1. Squash multiple commits into a single commit before creating a pull request:
-git checkout my_feature
-git rebase -i HEAD~<number_of_commits>
-Change `pick` to `squash` for all but the first commit, then save and exit the editor. Edit the commit message and save.
-2. Perform an interactive rebase to edit, squash, or reorder past commits:
-git rebase -i HEAD~<number_of_commits>
-3. Cherry-pick specific commits from another branch:
-git checkout main
-git cherry-pick <commit_hash>
-4. Force-push the feature branch after a rebase or history rewrite:
-git push origin my_feature --force-with-lease
-5. Use git bisect to find the commit that introduced a bug:
-git bisect start
-git bisect bad
-git bisect good <last_known_good_commit>
-Follow the prompts, marking each commit as "good" or "bad" until the culprit is found. Then run git bisect reset.
-<!--- ``` --->
-
+git commit -m "Commit message"
+git push origin new_branch
+<!--- close code --->
 
 <a name="GitLab_Flow"></a>
 ### GitLab Flow
 
-**Important points 📌**
+**Important points 📌**:
+- Git workflow tailored for GitLab
+- One main branch: `master` or `main`
+- Environment branches
+- Merge requests for collaboration and code review
 
-Based on GitHub Flow
-Environment branches
-Merge requests
-Continuous Integration and Continuous Deployment (CI/CD)
-**Content table 📜**
+**Content table 📜**:
 
-| Point | Description |
-| --- | --- |
+| Points         | Description                                                 |
+|----------------|-------------------------------------------------------------|
+| Tailored       | GitLab Flow is designed specifically for GitLab.            |
+| Main branch    | One main branch, usually called master or main.             |
+| Environment    | Environment branches for different stages of development (e.g., staging, production).|
+| Merge requests | Collaboration and code review through merge requests.        |
 
-|GitHub Flow foundation |	GitLab Flow is based on GitHub Flow, with added features for complex projects.
-|Environment branches |	Additional branches for staging, production, and other environments.
-|Merge requests |	Similar to pull requests, merge requests are used for code review and collaboration.
-|CI/CD |	GitLab Flow integrates Continuous Integration and Continuous Deployment processes.
+**References 📚**:
+- [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html)
+- [The GitLab Workflow: How We Use GitLab to Build GitLab](https://about.gitlab.com/blog/2016/10/25/gitlab-workflow-an-overview/)
 
-**References 📚**
+**Diagram 📊**:
+- [GitLab Flow Diagram](https://docs.gitlab.com/ee/topics/gitlab_flow/gitlab_flow_diagram.png)
 
-GitLab Flow Documentation
-Introducing GitLab Flow
+**10 years old definition 👶**:
+GitLab Flow is a way to work on a project that is made for GitLab. We make branches for each part of the project and use different environments to test our work.
 
-**Diagram 📊**
-GitLab Flow Diagram
+**Definition 🧑**:
+GitLab Flow is a Git workflow designed specifically for GitLab, with one main branch (`master` or `main`) and environment branches for different stages of development (e.g., staging, production). It uses merge requests for collaboration and code review.
 
-**10 years old definition 👶**
-GitLab Flow is a set of rules to help people work together on a project using GitLab. It's like GitHub Flow, but with some extra steps for bigger projects.
+**PHD definition 🎓**:
+GitLab Flow is a Git workflow tailored for GitLab that focuses on continuous integration and continuous deployment. It involves a single main branch and environment branches to manage various stages of the development process. Merge requests facilitate collaboration and code review.
 
-**Definition 🧑**
-GitLab Flow is a Git workflow based on GitHub Flow, with additional features to handle complex projects. It incorporates environment branches for staging, production, and other environments, and uses merge requests for collaboration and code review. GitLab Flow also integrates Continuous Integration and Continuous Deployment (CI/CD) processes.
+**Practical exercises🏋️**:
+1. Create a new GitLab project.
+2. Clone the project to your local machine.
+3. Create a new branch for a feature or bugfix.
+4. Commit changes to the new branch and push to the remote repository.
+5. Create a merge request on GitLab.
 
-**PHD definition 🎓**
-GitLab Flow is an extension of the GitHub Flow Git workflow, designed to accommodate more complex projects and CI/CD processes. It includes environment-specific branches for staging, production, and other environments, facilitating seamless integration of CI/CD pipelines. Merge requests are employed for code review, collaboration, and quality assurance, ensuring a robust and efficient development process.
+**Answers 👍**:
+1. Click the "New Project" button on your GitLab dashboard and follow the prompts.
+2. `git clone https://gitlab.com/your_username/new_project.git`
+3. `git checkout -b new_branch`
+4. Make changes, `git add .`, `git commit -m "Commit message"`, and `git push origin new_branch`.
+5. Navigate to your GitLab project, click "Merge Requests", and then click "New Merge Request". Select your new branch, and then click "Submit Merge Request".
 
-**Practical exercises🏋️**
+**Basic examples 🔰**:
+<!--- open code --->
+# Clone the GitLab project
+git clone https://gitlab.com/your_username/new_project.git
+<!--- close code --->
 
-- Create a new GitLab repository and clone it locally.
-- Create a feature branch.
-- Make changes and commit them to the feature branch.
-- Push the feature branch to the remote repository.
-- Create a merge request to merge the feature branch into the main branch.
-- Review, approve, and merge the merge request.
-- Create environment branches and configure CI/CD pipelines.
+<!--- open code --->
+# Create a new branch for a feature or bugfix
+git checkout -b new_branch
+<!--- close code --->
 
-**Answers 👍**
-
-- Create a new GitLab repository by clicking "New project" on your GitLab dashboard. Clone the repository using git clone - <repository_url>.
-- Create a feature branch with git checkout -b my_feature.
-- Make changes to the codebase and commit them using git add . and git commit -m "Add my feature".
-- Push the feature branch to the remote repository using git push origin my_feature.
-- Go to the GitLab repository page, and click on "Merge Requests". Click "New merge request" and select the feature branch to create - a merge request.
-- Review the changes, leave comments if needed, and finally click "Merge" to merge the changes into the main branch.
-7. Create environment branches (e.g., staging, production) using `git checkout -b <environment_branch>`. Configure CI/CD pipelines using GitLab's built-in CI/CD features and a `.gitlab-ci.yml` file.
-
-**Basic examples 🔰**
-<!--- ``` --->
-1. Cloning a GitLab repository:
-git clone https://gitlab.com/username/my_project.git
-2. Creating a feature branch:
-git checkout -b my_feature
-3. Committing changes to the feature branch:
+<!--- open code --->
+# Commit changes to the new branch and push to the remote repository
 git add .
-git commit -m "Add my feature
-4. Pushing the feature branch to the remote repository:
-git push origin my_feature
-5. Pulling changes from the remote main branch:
-git checkout main
-git pull
-<!--- ``` --->
-
-**Middle-ground examples ⚖️**
-<!--- ``` --->
-1. Create a merge request from the command line using `glab`:
-glab mr create -t "Add my feature" -b main -s my_feature
-2. Fetch and checkout a remote merge request locally:
-git fetch origin merge-requests/<merge_request_id>/head:mr_branch
-git checkout mr_branch
-3. Merge a merge request locally and push the changes to the main branch:
-git checkout main
-git merge --no-ff mr_branch
-git push origin main
-4. Rebase the feature branch on top of the main branch:
-git checkout my_feature
-git rebase main
-5. Resolve merge conflicts and continue the rebase process:
-git add <conflicted_file>
-git rebase --continue
-
-<!--- ``` --->
-
-**Advanced examples 🚀**
-<!--- ``` --->
-1. Squash multiple commits into a single commit before creating a merge request:
-git checkout my_feature
-git rebase -i HEAD~<number_of_commits>
-Change `pick` to `squash` for all but the first commit, then save and exit the editor. Edit the commit message and save.
-2. Perform an interactive rebase to edit, squash, or reorder past commits:
-git rebase -i HEAD~<number_of_commits>
-3. Cherry-pick specific commits from another branch:
-git checkout main
-git cherry-pick <commit_hash>
-4. Force-push the feature branch after a rebase or history rewrite:
-git push origin my_feature --force-with-lease
-5. Use `git bisect` to find the commit that introduced a bug:
-git bisect start
-git bisect bad
-git bisect good <last_known_good_commit>
-Follow the prompts, marking each commit as "good" or "bad" until the culprit is found. Then run `git bisect reset`.
-<!--- ``` --->
+git commit -m "Commit message"
+git push origin new_branch
+<!--- close code --->
 
 <a name="OneFlow"></a>
 ### OneFlow
 
-**Important points 📌**
-- Simplified Git workflow
-- Main branch with feature and hotfix branches
-- Rebase for feature branches
-- Merge commits for hotfix branches
+**Important points 📌**:
+- Simplified workflow with one main branch
+- Main branch (`master` or `main`) is always releasable
+- Feature branches and hotfix branches
+- Pull requests or merge requests for collaboration and code review
 
-**Content table 📜**
+**Content table 📜**:
 
-| Point | Description |
-| --- | --- |
-| Simplified workflow | OneFlow is a simple, streamlined Git workflow. |
-| Main branch | OneFlow uses a main branch for development and releases. |
-| Feature branches | Feature branches are created for new features and rebased onto the main branch.
+| Points         | Description                                               |
+|----------------|-----------------------------------------------------------|
+| Simplified     | OneFlow is a simple workflow with one main branch.        |
+| Main branch    | One main branch, usually called `master` or `main`.       |
+| Feature        | Feature branches for development.                         |
+| Hotfix         | Hotfix branches for fixing critical issues.               |
+| Collaboration  | Pull requests or merge requests for collaboration.        |
 
-| Hotfix branches | Hotfix branches are created for urgent bug fixes and merged into the main branch using merge commits. |
+**References 📚**:
+- [OneFlow – a Git branching model and workflow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow)
 
-**References 📚**
-1. [OneFlow: A Git branching model and workflow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow)
+**Diagram 📊**:
+- [OneFlow Diagram](https://www.endoflineblog.com/img/oneflow-branches.png)
 
-**Diagram 📊**
-![OneFlow Diagram](https://www.endoflineblog.com/img/2017-04/oneflow-git-branching-model-and-workflow/oneflow.png)
+**10 years old definition 👶**:
+OneFlow is a simple way to work on a project with one main branch. We make branches for each part of the project and put them back together.
 
-**10 years old definition 👶**
-OneFlow is a simple way to work together on a project using Git. It has one main branch, and other branches are used to add new features or fix problems quickly.
+**Definition 🧑**:
+OneFlow is a simplified Git workflow with one main branch (`master` or `main`) that is always releasable. It uses feature branches and hotfix branches for development and relies on pull requests or merge requests for collaboration and code review.
 
-**Definition 🧑**
-OneFlow is a simplified Git workflow that utilizes a single main branch for development and releases, along with feature branches and hotfix branches. Feature branches are created for new features, and are rebased onto the main branch. Hotfix branches are created for urgent bug fixes, and are merged into the main branch using merge commits.
+**PHD definition 🎓**:
+OneFlow is a streamlined Git workflow that emphasizes a single main branch, which is always in a releasable state. It incorporates feature branches for development and hotfix branches for addressing critical issues. Collaboration and code review occur through pull requests or merge requests.
 
-**PHD definition 🎓**
-OneFlow is a streamlined Git workflow that focuses on a single main branch for development and releases, while employing feature and hotfix branches for new features and urgent bug fixes, respectively. In OneFlow, feature branches are rebased onto the main branch to maintain a linear history, while hotfix branches use merge commits to facilitate rapid integration of critical fixes.
+**Practical exercises🏋️**:
+1. Clone a repository to your local machine.
+2. Create a new branch for a feature or bugfix.
+3. Commit changes to the new branch and push to the remote repository.
+4. Create a pull request or merge request for the new branch.
+5. Create a hotfix branch, commit changes, and create a pull request or merge request.
 
-**Practical exercises🏋️**
-1. Create a new Git repository and clone it locally.
-2. Create a feature branch and make changes.
-3. Rebase the feature branch onto the main branch.
-4. Push the feature branch and create a pull request.
-5. Create a hotfix branch for an urgent bug fix.
-6. Merge the hotfix branch into the main branch using a merge commit.
+**Answers 👍**:
+1. `git clone https://github.com/your_username/repository.git`
+2. `git checkout -b new_feature_branch`
+3. Make changes, `git add .`, `git commit -m "Commit message"`, and `git push origin new_feature_branch`.
+4. Navigate to the repository on GitHub or GitLab, click "Pull Requests" or "Merge Requests", and then click "New Pull Request" or "New Merge Request". Select your new branch, and then click "Create Pull Request" or "Submit Merge Request".
+5. `git checkout -b hotfix_branch master`, make changes, `git add .`, `git commit -m "Hotfix commit message"`, and `git push origin hotfix_branch`. Create a pull request or merge request as in step 4.
 
-**Answers 👍**
-1. Create a new Git repository on your preferred platform and clone it locally using `git clone <repository_url>`.
-2. Create a feature branch with `git checkout -b my_feature`, make changes to the codebase, and commit them using `git add .` and `git commit -m "Add my feature"`.
-3. Rebase the feature branch onto the main branch with `git rebase main`.
-4. Push the feature branch to the remote repository using `git push origin my_feature`, and create a pull request.
-5. Create a hotfix branch for an urgent bug fix using `git checkout -b hotfix_bug`.
-6. Make changes to fix the bug, commit them, and merge the hotfix branch into the main branch using a merge commit: `git checkout main`, `git merge --no-ff hotfix_bug`.
+**Basic examples 🔰**:
+<!--- open code --->
+# Clone the repository
+git clone https://github.com/your_username/repository.git
+<!--- close code --->
 
-**Basic examples 🔰**
-<!--- ``` --->
-1. Cloning a Git repository:
-git clone https://github.com/username/my_project.git
-2. Creating a feature branch:
-git checkout -b my_feature
-3. Rebasing the feature branch onto the main branch:
-git rebase main
-4. Pushing the feature branch to the remote repository:
-git push origin my_feature
-5. Creating a hotfix branch:
-git checkout -b hotfix_bug
+<!--- open code --->
+# Create a new feature branch
+git checkout -b new_feature_branch
+<!--- close code --->
 
-**Middle-ground examples ⚖️**
-<!--- ``` --->
-1. Resolving merge conflicts during a rebase:
-git add <conflicted_file>
-git rebase --continue
-2. Squashing multiple commits during a rebase:
-git rebase -i HEAD~<number_of_commits>
-Change `pick` to `squash for all but the first commit, then save and exit the editor. Edit the commit message and save.
-3. Cherry-picking a commit from another branch to the main branch:
-git checkout main
-git cherry-pick <commit_hash>
-4. Merging a hotfix branch into the main branch using a merge commit:
-git checkout main
-git merge --no-ff hotfix_bug
-5. Force-push a feature branch after a rebase or history rewrite:
-git push origin my_feature --force-with-lease
-
-**Advanced examples 🚀**
-<!--- ``` --->
-1. Perform an interactive rebase to edit, squash, or reorder past commits:
-git rebase -i HEAD~<number_of_commits>
-2. Use `git bisect` to find the commit that introduced a bug:
-git bisect start
-git bisect bad
-git bisect good <last_known_good_commit>
-Follow the prompts, marking each commit as "good" or "bad" until the culprit is found. Then run `git bisect reset`.
-3. Create a temporary branch to save your work before rebasing:
-git checkout -b temp_branch
-git rebase main
-If the rebase is successful, delete the temporary branch using `git branch -D temp_branch`.
-4. Use `git reflog` to recover a branch that was accidentally deleted or overwritten:
-git reflog
-git checkout -b recovered_branch <commit_hash>
-5. Use `git stash` to save changes before switching branches or rebasing:
-git stash save "My changes"
-git checkout main
-git stash apply
+<!--- open code --->
+# Commit changes to the new branch and push to the remote repository
+git add .
+git commit -m "Commit message"
+git push origin new_feature_branch
+<!--- close code --->
 
 <a name="Commit_Messages_Best_Practices"></a>
 ### Commit Messages Best Practices
 
-**Important points 📌**
-- Provide meaningful information
-- Use present tense and imperative mood
+**Important points 📌**:
+- Write clear and concise commit messages
+- Use the imperative mood
 - Limit the subject line to 50 characters
-- Separate the subject from the body with a blank line
+- Separate subject from body with a blank line
 - Wrap the body at 72 characters
-- Use the body to explain the "what" and "why" of the commit
+- Use the body to explain what and why, not how
 
-**Content table 📜**
+**Content table 📜**:
 
-| Point | Description |
-| --- | --- |
-| Meaningful information | Commit messages should convey the purpose of the commit. |
-| Present tense and imperative mood | Commit messages should be written in the present tense and use the imperative mood (e.g., "Add feature" instead of "Added feature"). |
-| Subject line limit | The subject line should be limited to 50 characters or less. |
-| Blank line | Separate the subject and body with a blank line. |
-| Body wrapping | Wrap the body at 72 characters for readability. |
-| Explain "what" and "why" | Use the commit message body to explain what the commit does and why it is necessary. |
+| Points               | Description                                  |
+|----------------------|----------------------------------------------|
+| Clear and concise    | Write clear and concise commit messages.     |
+| Imperative mood      | Use the imperative mood in the subject line. |
+| Subject line limit   | Limit the subject line to 50 characters.     |
+| Subject-body spacing | Separate subject from body with a blank line.|
+| Body wrap            | Wrap the body at 72 characters.              |
+| Body explanation     | Use the body to explain what and why.        |
 
-**References 📚**
-1. [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
-2. [Git Commit Message Conventions](https://www.conventionalcommits.org/en/v1.0.0/)
+** References 📚**:
+- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+- [Git - Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project)
 
-**10 years old definition 👶**
-When you save your work in Git, you need to write a message that explains what you did and why. This message should be short, clear, and easy to understand.
+**10 years old definition 👶**:
+A good commit message helps other people understand what you did and why. Keep it short and clear.
 
-**Definition 🧑**
-Commit messages are essential for communicating the purpose and context of a commit in a Git repository. Best practices for commit messages include providing meaningful information, using present tense and imperative mood, limiting the subject line to 50 characters, separating the subject and body with a blank line, wrapping the body at 72 characters, and using the body to explain the "what" and "why" of the commit.
+**Definition 🧑**:
+Commit message best practices include writing clear and concise messages, using the imperative mood, limiting the subject line to 50 characters, separating the subject from the body with a blank line, wrapping the body at 72 characters, and using the body to explain what and why, not how.
 
-**PHD definition 🎓**
-Commit messages in a Git repository serve as an essential communication tool for conveying the purpose, context, and rationale behind a commit. Adhering to best practices for commit messages, such as providing meaningful information, employing present tense and imperative mood, constraining the subject line to 50 characters, separating the subject and body with a blank line, wrapping the body at 72 characters, and utilizing the body to elaborate on the "what" and "why" aspects of the commit, ensures that commit messages effectively contribute to the repository's documentation and history.
+**PHD definition 🎓**:
+Best practices for commit messages involve crafting concise, descriptive messages that adhere to specific formatting guidelines, such as using the imperative mood, adhering to character limits for subject lines and body text, and providing sufficient context in the body to explain the rationale behind the change.
 
-**Practical exercises🏋️**
-1. Write a commit message for a new feature.
-2. Write a commit message for a bug fix.
-3. Write a commit message for a code refactor.
-4. Write a commit message for a documentation update.
-5. Write a commit message for a merge conflict resolution.
+**Practical exercises🏋️**:
+1. Write a clear and concise commit message for a bug fix.
+2. Write a commit message for a new feature using the imperative mood.
+3. Format a commit message with a subject line and body separated by a blank line.
+4. Write a commit message with a body wrapped at 72 characters.
+5. Write a commit message that explains the reason behind a change.
 
-**Answers 👍**
-1. New feature commit message:
-Add user authentication
+**Answers 👍**:
+1. `git commit -m "Fix login bug for invalid credentials"`
+2. `git commit -m "Add search functionality"`
+3. `git commit -m "Implement pagination\n\nAdd pagination to the results page to improve user experience."`
+4. `git commit -m "Refactor API client\n\nRestructure the API client to make it more modular and easier to maintain. This change also improves the testability of the code and simplifies future expansions."` (Body text wrapped at 72 characters)
+5. `git commit -m "Update README\n\nUpdate the README file to include new setup instructions and additional information about the project's goals and features."`
 
-Implement user authentication using JWT tokens to secure the API endpoints.
-2. Bug fix commit message:
-Fix broken image link on homepage
+**Basic examples 🔰**:
+<!--- open code --->
+# Clear and concise commit message
+git commit -m "Fix broken link in documentation"
+<!--- close code --->
 
-Correct the relative path of the image to display it properly on the homepage.
-3. Code refactor commit message:
-Refactor database connection logic
+<!--- open code --->
+# Imperative mood commit message
+git commit -m "Add support for dark mode"
+<!--- close code --->
 
-Extract database connection logic to a separate module for better code organization and reuse.
-4. Documentation update commit message:
-Update README with new installation instructions
-
-Add updated instructions for setting up the project with Docker and docker-compose.
-5. Merge conflict resolution commit message:
-Resolve merge conflict in app.js
-
-Manually merged changes from both branches to fix the conflict.
-
-**Basic examples 🔰**
-<!--- ``` --->
-1. Commit a new feature with a properly formatted message:
-git add .
-git commit -m "Add user authentication
-
-Implement user authentication using JWT tokens to secure the API endpoints."
-2. Commit a bug fix with a properly formatted message:
-git add .
-git commit -m "Fix broken image link on homepage
-
-Correct the relative path of the image to display it properly on the homepage."
-3. Commit a code refactor with a properly formatted message:
-git add .
-git commit -m "Refactor database connection logic
-
-Extract database connection logic to a separate module for better code organization and reuse."
-4. Commit a documentation update with a properly formatted message:
-git add .
-git commit -m "Update README with new installation instructions
-
-Add updated instructions for setting up the project with Docker and docker-compose."
-5. Commit a merge conflict resolution with a properly formatted message:
-git add .
-git commit -m "Resolve merge conflict in app.js
-
-Manually merged changes from both branches to fix the conflict."
-
-**Middle-ground examples ⚖️**
-<!--- ``` --->
-1. Amend a previous commit message:
-git commit --amend -m "New commit message"
-2. Squash multiple commits into a single commit with a new message:
-git rebase -i HEAD~<number_of_commits>
-Change `pick` to `squash` for all but the first commit, save and exit the editor. Edit the commit message and save.
-3. Use `git log` to view the commit history with custom formatting:
-git log --pretty=format:"%h - %an, %ar : %s"
-4. Use git log with a search query to find a specific commit:
-git log --grep="commit message"
-5. Use git blame to see who last modified each line of a file and the associated commit message:
-git blame <filename>
-
-**Advanced examples 🚀**
-
-<!--- ``` --->
-1. Use git filter-branch to rewrite commit messages in the history:
-git filter-branch -f --msg-filter 'sed "s/old_text/new_text/"' HEAD
-2. Use git log with a complex search query to find specific commits:
-git log --author="John Doe" --grep="feature" --since="2 weeks ago" --before="1 week ago"
-3. Use git show to display a commit's message and diff:
-git show <commit_hash>
-4. Use git cherry-pick with the -n option to apply a commit's changes without creating a new commit, then modify the commit message:
-git cherry-pick -n <commit_hash>
-git commit -m "New commit message"
-5. Use git bisect to find a commit that introduced a bug and include the commit message in the output:
-git bisect start
-git bisect bad
-git bisect good <last_known_good_commit>
-Follow the prompts, marking each commit as "good" or "bad" until the culprit is found. Then run git bisect reset.
-
+<!--- open code --->
+# Commit message with a subject line and body
+git commit -m "Refactor authentication module\n\nImprove code readability and maintainability by refactoring the authentication module and splitting it into smaller components."
+<!--- close code --->
 
 <a name="Code_Review_Practices"></a>
-
 ### Code Review Practices
 
-**Important points 📌**
+**Important points 📌**:
+- Review code for correctness, readability, and maintainability
+- Provide constructive feedback
+- Be respectful and professional
+- Keep feedback focused on the code, not the person
+- Use a consistent code review process
+- Review code in a timely manner
 
-Foster a positive and collaborative environment
-Ensure code quality and maintainability
-Focus on code, not the person
-Be specific and clear
-Provide constructive feedback
-Prioritize communication
-Be thorough but efficient
+**Content table 📜**:
 
-**Content table 📜**
-| Point | Description |
-| --- | --- |
-|Positive environment |	Encourage a positive and collaborative atmosphere during code reviews.
-|Code quality |	Ensure the code is high-quality and maintainable.
-|Focus on code |	Address the code, not the person who wrote it.
-|Specific and clear |	Be specific and clear in your feedback.
-|Constructive feedback |	Offer feedback that helps improve the code.
-|Communication |	Prioritize open and respectful communication.
-|Thorough and efficient |	Be thorough in your review but also efficient in your time management.
+| Points                 | Description                                               |
+|------------------------|-----------------------------------------------------------|
+| Code quality           | Review code for correctness, readability, and maintainability.  |
+| Constructive feedback  | Provide constructive feedback to the developer.          |
+| Respectful             | Be respectful and professional in your communication.    |
+| Code-focused           | Keep feedback focused on the code, not the person.       |
+| Consistent process     | Use a consistent code review process across the team.    |
+| Timely reviews         | Review code in a timely manner to avoid bottlenecks.    |
 
-**References 📚**
-1. [Google Engineering Practices: Code Review](https://google.github.io/eng-practices/review/)
-1. [Code Review Best Practices](https://www.kevinlondon.com/2015/05/05/code-review-best-practices)
+**References 📚**:
+- [Best Practices for Code Review](https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html)
+- [Google Engineering Practices Documentation - Code Review](https://google.github.io/eng-practices/review/)
 
-**10 years old definition 👶**
-When people write computer programs, they sometimes make mistakes or need help making their work better. Code review is when someone looks at another person's work and gives them advice on how to improve it. It's important to be nice and helpful during code reviews.
+**10 years old definition 👶**:
+Code review is when someone looks at your code to make sure it's good. They help you fix mistakes and make the code better.
 
-**Definition 🧑**
-Code review is the process of examining and evaluating another developer's code to identify potential issues, ensure code quality, and provide feedback for improvement. Best practices for code review include fostering a positive and collaborative environment, focusing on the code rather than the person, being specific and clear in feedback, providing constructive criticism, prioritizing communication, and balancing thoroughness with efficiency.
+**Definition 🧑**:
+Code review practices involve reviewing code for correctness, readability, and maintainability, providing constructive feedback, maintaining respectful and professional communication, focusing feedback on the code rather than the person, following a consistent review process, and conducting reviews in a timely manner.
 
-**PHD definition 🎓**
-Code review is a critical aspect of software development that involves the systematic examination and evaluation of a developer's code by their peers.
+**PHD definition 🎓**:
+Code review best practices encompass the systematic evaluation of code for adherence to established standards of correctness, readability, and maintainability, offering constructive feedback to the developer, ensuring respectful and professional communication, maintaining a focus on code-specific critiques, adhering to a uniform review process, and completing reviews in a timely fashion to prevent bottlenecks.
 
-The primary objectives of code review are to identify potential defects, ensure code quality and maintainability, and facilitate knowledge sharing among team members. Adhering to best practices, such as promoting a positive and collaborative environment, focusing on the code rather than the developer, providing specific and clear feedback, offering constructive criticism, prioritizing open and respectful communication, and striking a balance between thoroughness and efficiency, ensures that code reviews effectively contribute to the overall success of a software project.
+**Practical exercises🏋️**:
+1. Review a teammate's code and provide constructive feedback.
+2. Use a code review checklist to ensure consistency.
+3. Respond to feedback on your code in a respectful and professional manner.
+4. Review a pull request and provide feedback focused on the code, not the person.
+5. Set a deadline for completing code reviews to avoid bottlenecks.
 
-**Practical exercises🏋️**
-1. Review a pull request in a GitHub repository.
-2. Review a merge request in a GitLab repository.
-3. Provide feedback on a code snippet shared by a team member.
-4. Perform a code review on an open-source project.
-5. Create a code review checklist for your team to follow.
+**Answers 👍**:
+These exercises are subjective and depend on your specific project and team dynamics. The key is to apply the best practices mentioned above in each exercise.
 
-**Answers 👍**
-1. To review a pull request in a GitHub repository, navigate to the "Pull Requests" tab, select a pull request, review the changes, and leave comments or approve the changes.
-2. To review a merge request in a GitLab repository, navigate to the "Merge Requests" tab, select a merge request, review the changes, and leave comments or approve the changes.
-3. When providing feedback on a code snippet shared by a team member, focus on code quality, maintainability, and potential improvements. Be specific and clear in your feedback, and offer constructive criticism.
-4. To perform a code review on an open-source project, find a project on GitHub or GitLab that interests you, navigate to the "Issues" or "Merge Requests" tab, select an issue or merge request, and provide feedback or review the changes.
-5. A code review checklist could include items such as checking for code readability, ensuring tests are present, verifying documentation updates, and validating that the code follows established design patterns and coding standards.
+**Basic examples 🔰**:
+<!--- open code --->
+# Sample code review comment (constructive feedback)
+"I noticed that this function has some duplicated code. You might consider creating a helper function to handle the common logic and improve maintainability."
+<!--- close code --->
 
-**Basic examples 🔰**
-<!--- ``` --->
-1. Review a pull request on GitHub:
-   - Go to the repository's "Pull Requests" tab
-   - Select a pull request
-   - Review the changes in the "Files changed" tab
-   - Leave comments or approve the changes
-2. Review a merge request on GitLab:
-   - Go to the repository's "Merge Requests" tab
-   - Select a merge request
-   - Review the changes in the "Changes" tab
-   - Leave comments or approve the changes
-3. Provide feedback on a code snippet shared by a team member:
-   - Review the code for readability, maintainability, and potential improvements
-   - Be specific and clear in your feedback
-   - Offer constructive criticism
-4. Perform a code review on an open-source project:
-   - Find a project on GitHub or GitLab that interests you
-   - Navigate to the "Issues" or "Merge Requests" tab
-   - Select an issue or merge request
-   - Provide feedback or review the changes
-5. Create a code review checklist for your team to follow:
-   - Check for code readability
-   - Ensure tests are present
-   - Verify documentation updates
-   - Validate that the code follows established design patterns and coding standards
-
-**Middle-ground examples ⚖️**
-<!--- ``` --->
-1. Perform a code review with a focus on performance improvements:
-   - Review the code for potential performance bottlenecks
-   - Suggest optimization techniques or alternative approaches
-   - Verify that the code follows best practices for performance
-2. Perform a code review with a focus on security:
-   - Review the code for potential security vulnerabilities
-   - Suggest security best practices and mitigation strategies
-   - Verify that the code follows established security guidelines
-3. Perform a code review with a focus on code maintainability:
-   - Review the    code for readability and ease of maintenance
-   - Suggest refactoring opportunities and improvements to code structure
-   - Verify that the code follows established design patterns and coding standards
-4. Perform a code review with a focus on test coverage:
-   - Review the code for test coverage and completeness
-   - Suggest additional test cases or improvements to existing tests
-   - Verify that the tests are well-organized and easy to maintain
-5. Perform a code review with a focus on documentation:
-   - Review the code for clear and concise documentation
-   - Suggest improvements to inline comments, function/method documentation, or overall documentation
-   - Verify that the documentation follows established documentation guidelines
-
-**Advanced examples 🚀**
-<!--- ``` --->
-1. Review a complex pull request or merge request that spans multiple files and requires an in-depth understanding of the project:
-   - Analyze the changes thoroughly, paying close attention to potential side effects or unintended consequences
-   - Collaborate with the author and other team members to ensure a deep understanding of the changes
-   - Provide detailed and constructive feedback, focusing on maintainability, performance, and security
-2. Review a pull request or merge request that includes database migrations or schema changes:
-   - Analyze the database changes and their potential impact on the application
-   - Verify that the migrations or schema changes follow established best practices and guidelines
-   - Provide feedback on the overall design and implementation of the database changes
-3. Review a pull request or merge request that includes significant architectural changes:
-   - Analyze the proposed architecture and its impact on the overall system
-   - Collaborate with the author and other team members to discuss the pros and cons of the proposed changes
-   - Provide feedback on the architectural design, considering factors such as maintainability, scalability, and extensibility
-4. Review a pull request or merge request that includes a new feature or major enhancement:
-   - Analyze the feature or enhancement and its potential impact on the application and user experience
-   - Verify that the feature or enhancement is well-designed, well-implemented, and thoroughly tested
-   - Provide feedback on the overall design and implementation of the feature or enhancement
-5. Review a pull request or merge request that includes significant refactoring or code cleanup:
-   - Analyze the refactoring or code cleanup and its potential impact on the application and maintainability
-   - Verify that the refactoring or code cleanup follows established best practices and guidelines
-   - Provide feedback on the overall design and implementation of the refactoring or code cleanup
+<!--- open code --->
+# Sample code review comment (respectful and professional)
+"Great job on implementing this feature! I have a suggestion to improve the error handling, which I've outlined below."
+<!--- close code --->
 
 <a name="Versioning_and_Release_Management"></a>
 ### Versioning and Release Management
 
-**Important points 📌**
-- Semantic Versioning
-- Release branches
-- Tagging
-- Changelogs
-- Continuous Integration (CI) and Continuous Delivery (CD)
+**Important points 📌**:
+- Use semantic versioning (major, minor, patch)
+- Separate development and release branches
+- Use tags to mark releases
+- Automate release management when possible
+- Keep a changelog to document changes
 
-**Content table 📜**
+**Content table 📜**:
 
-| Point | Description |
-| --- | --- |
-| Semantic Versioning | A versioning system that uses a structured format for version numbers: MAJOR.MINOR.PATCH. |
-| Release branches | Branches created for managing and stabilizing a specific release. |
-| Tagging | Assigning a unique identifier to a specific commit, often used for marking releases. |
-| Changelogs | A log of notable changes made between software versions. |
-| CI/CD | Continuous Integration and Continuous Delivery practices for automating the building, testing, and deployment of software. |
+| Points                 | Description                                               |
+|------------------------|-----------------------------------------------------------|
+| Semantic versioning    | Use major, minor, and patch version numbers.             |
+| Branch separation      | Separate development and release branches.               |
+| Tags                   | Use tags to mark releases in the repository.             |
+| Automation             | Automate release management when possible.                |
+| Changelog              | Maintain a changelog to document changes between releases.|
 
-**References 📚**
-1. [Semantic Versioning](https://semver.org/)
-2. [Git - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
-3. [Keep a Changelog](https://keepachangelog.com/)
-4. [Atlassian - Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
-5. [GitHub - Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-6. [GitLab - GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html)
+**References 📚**:
+- [Semantic Versioning](https://semver.org/)
+- [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+- [GitHub - Releasing projects](https://docs.github.com/en/repositories/releasing-projects-on-github)
+- [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-**Diagram 📊**
-- [Semantic Versioning Explained](https://insights.dice.com/2016/06/06/semantic-versioning-explained/)
+**10 years old definition 👶**:
+Versioning is giving numbers to different versions of a project. It helps people know what has changed and if the new version will work with what they have.
 
-**10 years old definition 👶**
-Versioning is like having different versions of your favorite toy, with each version having new features or improvements. Release management is making sure that each new version of the toy is tested and works well before giving it to other kids to play with.
+**Definition 🧑**:
+Versioning and release management practices involve using semantic versioning (major, minor, patch) to assign version numbers, separating development and release branches, using tags to mark releases, automating release management when possible, and maintaining a changelog to document changes between releases.
 
-**Definition 🧑**
-Versioning is the process of assigning unique identifiers to different versions of a software project, typically using a structured format like Semantic Versioning (MAJOR.MINOR.PATCH). Release management is the process of preparing, testing, and deploying software releases, often using release branches, tagging, and CI/CD practices.
+**PHD definition 🎓**:
+Versioning and release management encompass the systematic assignment of version numbers using semantic versioning principles, the separation of development and release branches to ensure stability, the use of tags to denote specific release points, the automation of release management processes to increase efficiency, and the maintenance of a comprehensive changelog to document changes between releases.
 
-**PHD definition 🎓**
-Versioning and release management are crucial aspects of software development that facilitate the systematic tracking, testing, and deployment of software updates. Semantic Versioning, which employs a structured format (MAJOR.MINOR.PATCH), enables developers to easily communicate the nature of changes introduced in a given release. Release management, which leverages release branches, tagging, changelogs, and CI/CD practices, streamlines the process of deploying stable software updates while minimizing disruptions to ongoing development.
+**Practical exercises🏋️**:
+1. Create a versioning scheme for your project using semantic versioning.
+2. Set up separate development and release branches in your repository.
+3. Tag a release in your repository.
+4. Implement an automated release management process.
+5. Maintain a changelog for your project.
 
-**Practical exercises🏋️**
-1. Create a new release branch for a software project.
-2. Tag a commit in a Git repository.
-3. Write a changelog for a software project.
-4. Set up a CI/CD pipeline for a software project.
-5. Update a project's version number following Semantic Versioning rules.
+**Answers 👍**:
+1. Choose a versioning scheme that follows the format `MAJOR.MINOR.PATCH`, where:
+   - MAJOR: Breaking changes
+   - MINOR: New features that are backward-compatible
+   - PATCH: Bug fixes and minor improvements
+2. In your repository, create a `develop` branch for ongoing development and a `main` or `master` branch for stable releases.
+3. To tag a release, use the following command:
+   <!--- open code --->
+   git tag -a v1.0.0 -m "Release version 1.0.0"
+   git push origin v1.0.0
+   <!--- close code --->
+4. Implement an automated release management process using tools like Jenkins, Travis CI, or GitHub Actions.
+5. Create a `CHANGELOG.md` file in your repository and update it with every release, documenting the changes made in each version.
 
-**Answers 👍**
-1. To create a new release branch for a software project, use the following Git command: `git checkout -b release/x.y.z`
-2. To tag a commit in a Git repository, use the following Git command: `git tag -a vX.Y.Z -m "Release X.Y.Z"`
-3. Writing a changelog involves documenting notable changes made between software versions, following a standard format such as [Keep a Changelog](https://keepachangelog.com/).
-4. Setting up a CI/CD pipeline for a software project involves configuring a build system, such as Jenkins, Travis CI, or GitLab CI/CD, to automatically build, test, and deploy the software.
-5. To update a project's version number following Semantic Versioning rules, increment the MAJOR, MINOR, or PATCH version number depending on the nature of the changes introduced in the release.
+**Basic examples 🔰**:
+<!--- open code --->
+# Semantic versioning example
+1.0.2
+<!--- close code --->
 
-**Basic examples 🔰**
-<!--- ``` --->
-1. Creating a new release branch in Git:
-git checkout -b release/1.2.0
-2. Tagging a commit in Git:
-git tag -a v1.2.0 -m "Release 1.2.0"
-3. Writing a simple changelog:
-Changelog
-All notable changes to this project will be documented in this file.
+<!--- open code --->
+# Branch separation example
+git checkout -b develop
+git checkout -b release/v1.0.0
+<!--- close code --->
 
-[1.2.0] - 2023-04-13
-Added
-New feature A
-New feature B
-[1.1.0] - 2023-03-01
-Changed
-Updated feature X
-Improved feature Y
-4. Config using a simple CI/CD pipeline using Travis CI:
-.travis.yml
-language: node_js
-node_js:
-- "14"
-script:
-- npm install
-- npm test
-deploy:
-provider: heroku
-api_key:
-secure: YOUR_API_KEY
-app: your-app-name
-5. Updating a project's version number following Semantic Versioning rules:
-Before: version 1.1.0
-After a minor update: version 1.2.0
-After a patch update: version 1.2.1
+<!--- open code --->
+# Tagging a release example
+git tag -a v1.0.0 -m "Release version 1.0.0"
+git push origin v1.0.0
+<!--- close code --->
 
-**Middle-ground examples ⚖️**
-<!--- ``` --->
-1. Creating a new release branch and merging it into the master branch in Git:
-git checkout -b release/1.3.0
+<!--- open code --->
+# Changelog example
+## [1.0.1] - 2023-04-17
+### Added
+- New feature A
+- New feature B
 
-Make changes, commit, and test
-git checkout master
-git merge release/1.3.0
-git branch -d release/1.3.0
-2. Tagging a commit and pushing the tag to a remote repository in Git:
-git tag -a v1.3.0 -m "Release 1.3.0"
-git push origin v1.3.0
-3. Writing a more detailed changelog with links to issues and commits:
-Changelog
-All notable changes to this project will be documented in this file.
-
-[1.3.0] - 2023-05-01
-Added
-New feature C (#123, Commit)
-New feature D (#456, Commit)
-[1.2.0] - 2023-04-13
-Added
-New feature A
-New feature B
-4. Setting up a CI/CD pipeline with GitLab CI/CD:
-.gitlab-ci.yml
-stages:
-- build
-- test
-- deploy
-
-build:
-stage: build
-script:
-- npm install
-
-test:
-stage: test
-script:
-- npm test
-
-deploy:
-stage: deploy
-script:
-- 'which ssh-agent || (apt-get update -y && apt-get install openssh-client -y)'
-- eval $(ssh-agent -s)
-- echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-- mkdir -p ~/.ssh
-- '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-- git remote add deploy "git@your-git-server.com:user/repo.git"
-- git push deploy master
-5. Updating a project's version number following Semantic Versioning rules and using Git tags:
-Before: version 2.0.0 (tagged as v2.0.0)
-After a major update: version 3.0.0
-git tag -a v3.0.0 -m "Release 3.0.0"
-git push origin v3.0.0
-
-**Advanced examples 🚀**
-<!--- ``` --->
-1. Creating a new release branch, merging it into the master branch, and tagging the merge commit in Git:
-git checkout -b release/2.0.0
-
-Make changes, commit, and test
-git checkout master
-git merge --no-ff release/2.0.0
-git tag -a v2.0.0 -m "Release 2.0.0"
-git branch -d release/2.0.0
-git push origin master --tags
-
-2. Tagging a specific commit in the Git history and pushing the tag to a remote repository:
-git tag -a v1.4.0 abcdef1 -m "Release 1.4.0"
-git push origin v1.4.0
-
-3. Writing a changelog with links to compare different versions:
-Changelog
-All notable changes to this project will be documented in this file.
-
-1.4.0 - 2023-06-01
-Changed
-Improved feature X (#789, Commit)
-Improved feature Y (#012, Commit)
-
-4. Setting up a CI/CD pipeline with Jenkins, using the Jenkinsfile to configure the pipeline:
-
-// Jenkinsfile
-pipeline {
-agent any    
-stages {
-       stage('Build') {
-           steps {
-               sh 'npm install'
-           }
-       }
-       stage('Test') {
-           steps {
-               sh 'npm test'
-           }
-       }
-       stage('Deploy') {
-           when {
-               branch 'master'
-           }
-           steps {
-               sshagent(credentials: ['your-ssh-credentials']) {
-                   sh 'git remote add deploy "git@your-git-server.com:user/repo.git"'
-                   sh 'git push deploy master'
-               }
-           }
-       }
-   }
-
-   5. Using `npm version` to update a project's version number following Semantic Versioning rules and create a Git tag:
-Before: version 1.4.0 (in package.json)
-After a patch update: version 1.4.1
-npm version patch -m "Release %s"
-git push origin master --tags
+### Fixed
+- Bug fix in feature C
+<!--- close code --->
 
 
 
@@ -3992,28 +3577,7 @@ git push origin master --tags
 
 
 
-
-
-
------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+=========================================================================
 
 
 

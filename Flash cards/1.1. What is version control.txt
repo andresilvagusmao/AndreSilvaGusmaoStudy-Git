@@ -1,0 +1,10 @@
+What is version control?|Version control is a system that records changes to a file or set of files over time so that specific versions can be recalled later.
+What are the benefits of version control?|Version control allows collaboration, version tracking, and easy recovery of previous versions of files.
+Name two types of version control systems.|Centralized and Distributed version control systems.
+What are the three main functions of version control?|Recording changes, tracking changes, and merging changes.
+Why do software developers use version control systems?|To collaborate, manage code history, and easily revert to previous versions if needed.
+How does version control help in collaboration?|Version control allows multiple people to work on the same project without overwriting each other's changes.
+What is the purpose of version control in software development?|Version control enables tracking changes, managing code history, and collaborating with other developers.
+What is the difference between local and remote repositories in version control systems?|Local repositories are stored on a developer's computer, while remote repositories are stored on a server or another machine accessible by multiple developers.
+What does it mean to "commit" in a version control system?|Committing in a version control system means saving a snapshot of the current state of the project files, along with a message describing the changes made.
+What is the difference between a "commit" and a "revision" in a version control system?|A commit is a snapshot of the project files at a specific point in time, while a revision is a unique identifier assigned to a commit.

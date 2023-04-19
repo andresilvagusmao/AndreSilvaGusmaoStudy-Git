@@ -1,0 +1,7 @@
+Quem criou o Git e por quê?|Linus Torvalds criou o Git em 2005 como uma resposta à necessidade de um sistema de controle de versão distribuído e eficiente para gerenciar o desenvolvimento do kernel do Linux.
+Qual foi o motivo da criação do Git?|A decisão de parar de usar o BitKeeper devido à sua natureza proprietária e questões de licenciamento.
+Qual sistema de controle de versão foi usado antes do Git para o desenvolvimento do kernel do Linux?|BitKeeper
+O Git foi desenvolvido como um projeto de código aberto?|Sim, o Git é um projeto de código aberto desde o início e é licenciado sob a GNU General Public License versão 2.
+Quem é o criador do Git?|O Git foi criado por Linus Torvalds, o criador do sistema operacional Linux.
+Em que ano o Git foi lançado?|O Git foi lançado em 2005.
+Quais foram algumas das motivações para a criação do Git?|As principais motivações para a criação do Git incluíam: a necessidade de um sistema de controle de versão distribuído, rápido e eficiente para o desenvolvimento do kernel Linux, e a indisponibilidade de um VCS distribuído adequado e de código aberto no momento.
